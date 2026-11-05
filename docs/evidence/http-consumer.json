@@ -1,0 +1,27 @@
+{
+  "result": "PASS",
+  "sourceBytes": 7374595,
+  "sourceId": "demo:6455a98f-e309-46a5-812b-d69b85b31e2f",
+  "prepared": {
+    "status": "ready",
+    "generation": "ea3f4e1c-99d4-4a7b-8e24-78c2865818e5",
+    "playlistUrl": "/api/videos/demo:6455a98f-e309-46a5-812b-d69b85b31e2f/assets/ea3f4e1c-99d4-4a7b-8e24-78c2865818e5/playlist.m3u8",
+    "durationSeconds": 32.0,
+    "segmentCount": 16
+  },
+  "checks": [
+    "anonymous401",
+    "csrf403",
+    "foreignSource403",
+    "foreignAsset403",
+    "bodyMismatch400",
+    "genericRoute404",
+    "uploadCommit201",
+    "prepare201",
+    "manifest",
+    "init",
+    "segment",
+    "range206",
+    "allowlist400"
+  ]
+}

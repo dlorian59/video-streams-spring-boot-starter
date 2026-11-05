@@ -1,0 +1,10 @@
+// EN: Development-only local artifact repository; no registry publishing is configured here.
+// RU: Локальный репозиторий артефактов только для разработки; публикации в реестр здесь нет.
+allprojects {
+    plugins.withId('maven-publish') {
+        publishing.repositories.maven {
+            name = 'oss014Local'
+            url = rootProject.layout.buildDirectory.dir('local-repository')
+        }
+    }
+}

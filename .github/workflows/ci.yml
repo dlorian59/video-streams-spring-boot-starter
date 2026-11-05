@@ -1,0 +1,39 @@
+name: CI
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  consumer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: video-streams-spring-boot-starter
+      - uses: actions/checkout@v4
+        with:
+          repository: dlorian59/file-streams
+          ref: d03a2c97b10c38977b8e121897ac4e8007a8ed8d
+          path: file-streams
+      - uses: actions/checkout@v4
+        with:
+          repository: dlorian59/file-streams-spring-boot-starter
+          ref: 5b6a062259a2e118d020d947bafb61dff2bcd9ce
+          path: file-streams-spring-boot-starter
+      - uses: actions/checkout@v4
+        with:
+          repository: dlorian59/video-streams
+          ref: 3dcedd91caf943484c120bd6401242d6ea8f0187
+          path: video-streams
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+      - run: ./scripts/prepare-local-artifacts.sh
+        working-directory: video-streams-spring-boot-starter
+      - run: ./gradlew build --no-daemon --max-workers=2
+        working-directory: video-streams-spring-boot-starter
+      - run: mvn -q clean package
+        working-directory: video-streams-spring-boot-starter/examples/secured-video
+      - run: ../../gradlew classes --no-daemon --max-workers=2
+        working-directory: video-streams-spring-boot-starter/examples/secured-video

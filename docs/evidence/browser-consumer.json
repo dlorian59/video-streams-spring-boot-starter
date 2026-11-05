@@ -1,0 +1,34 @@
+[
+  {
+    "language": "en",
+    "backend": "Spring WebFlux + FFmpeg + Garage S3",
+    "sourceBytes": 7374595,
+    "durationSeconds": 32,
+    "segments": 16,
+    "initialSegmentRequests": 3,
+    "upload201": true,
+    "prepare201": true,
+    "playback": true,
+    "seekSeconds": 24,
+    "cleanupStopsRequests": true,
+    "unauthenticatedPlaylist": 401,
+    "generation": "fc82d034-21fb-4da8-a791-cbbacb992b8f",
+    "errors": []
+  },
+  {
+    "language": "ru",
+    "backend": "Spring WebFlux + FFmpeg + Garage S3",
+    "sourceBytes": 7374595,
+    "durationSeconds": 32,
+    "segments": 16,
+    "initialSegmentRequests": 3,
+    "upload201": true,
+    "prepare201": true,
+    "playback": true,
+    "seekSeconds": 24,
+    "cleanupStopsRequests": true,
+    "unauthenticatedPlaylist": 401,
+    "generation": "2d3a8776-e45f-4760-8174-2a74f77487a2",
+    "errors": []
+  }
+]

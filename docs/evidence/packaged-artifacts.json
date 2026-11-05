@@ -1,0 +1,7 @@
+{
+  "verifiedBeforeStartup": true,
+  "sha256": {
+    "video-streams": "40a45ff341152b6406feb95cde518f6ad5423c40460fcc9f7969283c64883948",
+    "video-streams-webflux": "bdd8b48e914bf90da7424fb6c0a2ff49cbd083dfcc915ec3e4f241600f55a86f"
+  }
+}

@@ -1,0 +1,29 @@
+file-streams:
+  enabled: true
+  http:
+    enabled: false
+  s3:
+    bucket: ${VIDEO_BUCKET}
+    region: ${AWS_REGION}
+    endpoint: ${S3_ENDPOINT}
+  limits:
+    profile: MEDIA
+video-streams:
+  enabled: true
+  work-directory: ${VIDEO_WORK_DIRECTORY}
+demo:
+  password: ${DEMO_PASSWORD}
+server:
+  address: 127.0.0.1
+  port: 19445
+  http2:
+    enabled: true
+  ssl:
+    certificate: ${DEMO_CERTIFICATE}
+    certificate-private-key: ${DEMO_PRIVATE_KEY}
+  reactive:
+    session:
+      cookie:
+        secure: true
+        http-only: true
+        same-site: strict
